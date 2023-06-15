@@ -36,7 +36,10 @@ const register = (req, res) => {
     })
 }
 
-const login = async (req, res) => {
+// const login = async (req, res) => {
+    
+// }
+const login = async (req,res)=> {
     const { email, password } = req.body
     try {
         const data = await User.findOne({ email }).select('+password').exec()
